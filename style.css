@@ -1,0 +1,135 @@
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background-image: url('background.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.game-container {
+  position: relative;
+  text-align: center;
+}
+
+.game-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.game-title {
+  background-color: #966f33;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.memory-game {
+  display: grid;
+  grid-template-columns: repeat(6, 80px); /* Adjust the grid to 6 columns and adjust the size */
+  grid-template-rows: repeat(4, 80px); /* Adjust the grid to 4 rows and adjust the size */
+  /*grid-template-columns: repeat(4, 100px);*/
+  grid-gap: 30px;
+  margin-bottom: 20px; /* Adjust the margin as needed */
+}
+
+.card {
+  width: 100px; /* Adjust the card width */
+  height: 100px; /* Adjust the card height */
+  /*width: 100px;
+  height: 100px;*/
+  background-color: #fffd74;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.card img {
+  max-width: 100%;
+  max-height: 100%;
+  opacity: 0; /* Initially set image opacity to 0 */
+  transition: opacity 0.3s ease-in-out;
+}
+
+.card.flipped img {
+  opacity: 1; /* Set opacity to 1 when the card is flipped */
+}
+
+.card.flipped {
+  background-color: #45a049;
+}
+
+.start-button,
+.reset-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #4CAF50;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  transition: background-color 0.3s ease-in-out;
+  margin-top: 20px; /* Adjust the margin-top as needed */
+}
+
+.start-button:hover,
+.reset-button:hover {
+  background-color: #45a049;
+}
+
+.stopwatch-container {
+  position: absolute;
+  top: 10px;
+  right: -360px;
+  margin: 5px; /* Adjust the margin as needed */
+  display: inline-block;
+  background-color: #966f33; /* Background color for the square */
+  color: #ffff00; /* Font color */
+  padding: 5px; /* Adjust padding as needed */
+  border-radius: 5px; /* Rounded corners for the square */
+  font-size: 50px; /* Adjust the font size as needed */
+}
+
+.fa-stopwatch {
+  margin-left: 5px; /* Add margin-left to the stopwatch icon if needed */
+}
+
+.game-clear-message {
+  display: none;
+  text-align: center;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 20px;
+  border-radius: 8px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.rankings {
+  position: absolute;
+  top: 120px;
+  left: -300px;
+  margin: 5px; /* Adjust the margin as needed */
+  display: inline-block;
+  background-color: #966f33; /* Background color for the square */
+  color: #fff; /* Font color */
+  padding: 5px; /* Adjust padding as needed */
+  border-radius: 15px; /* Rounded corners for the square */
+  font-size: 20px; /* Adjust the font size as needed */
+}
+
+/* Add this if you want to style each ranking entry separately */
+.rankings div {
+  margin-bottom: 5px;
+}

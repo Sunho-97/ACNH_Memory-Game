@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>동물의 숲 : 기억력 게임</title>
+</head>
+<body>
+    <div class="game-container">
+        <h1 class="game-title">▶ 동물의 숲 친구들을 찾아볼까요~?</h1>
+        <div class="game-info">
+            <div class="stopwatch-container">
+                <i class="fas fa-stopwatch"></i>
+                <span id="stopwatch">00:00</span>
+            </div>
+        </div>
+        <div class="memory-game">
+        <!-- Cards will be added here -->
+        </div>
+        <div class="game-clear-message" style="display: none;">
+            <p>게임 클리어!</p>
+            <p>클리어 시간: <span id="recorded-time">00:00</span></p>
+            <button class="register-button" onclick="registerRanking()">랭킹 등록</button>
+        </div>
+        <div class="rankings"></div>
+        <button class="start-button" onclick="startGame()">게임 시작!</button>
+        <button class="reset-button" onclick="resetGame()">처음으로</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
